@@ -23,13 +23,24 @@
 ;; Global Customization
 ;; --------------------------------------
 
+(load-packages
+ '(better-defaults
+   material-theme))
+
 (require 'better-defaults)
 (require 'material-theme)
-
 
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(package-selected-packages (quote (py-autopep8 flycheck elpy better-defaults))))
 
 ;; Language Config 
 ;; --------------------------------------
@@ -37,3 +48,9 @@
 (require 'languages)
 
 ;; init.el ends here
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

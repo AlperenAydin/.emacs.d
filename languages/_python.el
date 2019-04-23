@@ -1,13 +1,12 @@
 ;; _python.el --- Python Emacs Configuration
 
-
-
 ;; Install Packages
 ;; --------------------------------------
 
 (load-packages
  '(ein
    elpy
+   pyvenv
    flycheck
    py-autopep8))
 
@@ -15,7 +14,9 @@
 ;; Python Configuration
 ;; --------------------------------------
 
+;; Set elpy
 (elpy-enable)
+;;(setq elpy-rpc-python-command "python3")
 
 ;; use flycheck not flymake with elpy
 (when (require 'flycheck nil t)
@@ -26,7 +27,8 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-
+;; Activating the base conda env
+(pyvenv-activate (expand-file-name "~/anaconda3/"))
 
 (provide '_python)
 
