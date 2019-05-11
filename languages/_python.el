@@ -28,8 +28,15 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-;; Activating the base conda env
-(pyvenv-activate (expand-file-name "/home/alperen/.environments/base/"))
+;; Changing the autocomplete-trigger
+(add-hook 'elpy-mode-hook
+          (lambda ()
+            (local-unset-key (kbd "M-TAB"))
+            (define-key elpy-mode-map (kbd "TAB") 'elpy-company-backend)))
+
+;; Activating the base virtualenv
+(pyvenv-activate (expand-file-name "/home/alperen/.environments/base"))
+
 
 (provide '_python)
 

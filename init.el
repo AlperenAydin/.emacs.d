@@ -25,17 +25,28 @@
 
 (load-packages
  '(better-defaults
-   material-theme))
+   material-theme
+   ido-completing-read+))
 
 (require 'better-defaults)
 (require 'material-theme)
+(require 'ido-completing-read+)
 
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
 
+
+;; Ido and related packages
+(ido-mode 1) 
+(ido-everywhere 1)
+(ido-ubiquitous-mode 1)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 ;; Language Config 
 ;; --------------------------------------
