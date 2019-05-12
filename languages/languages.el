@@ -1,4 +1,5 @@
-;; languages.el --- Collect all the language configurations in a single file
+;; languages.el
+;; Collect all the language configurations in a single file
 ;; --------------------------------------
 
 ;; Language Configs

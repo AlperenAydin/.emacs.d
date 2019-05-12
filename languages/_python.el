@@ -31,8 +31,9 @@
 ;; Changing the autocomplete-trigger
 (add-hook 'elpy-mode-hook
           (lambda ()
-            (local-unset-key (kbd "M-TAB"))
-            (define-key elpy-mode-map (kbd "TAB") 'elpy-company-backend)))
+            (local-unset-key  [M-tab])
+            (define-key elpy-mode-map [C-tab] 'elpy-company-backend)))
+
 
 ;; Activating the base virtualenv
 (pyvenv-activate (expand-file-name "/home/alperen/.environments/base"))
