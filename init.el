@@ -26,7 +26,9 @@
 (load-packages
  '(better-defaults
    material-theme
-   ido-completing-read+))
+   ido-completing-read+
+   magit
+   ))
 
 (require 'better-defaults)
 (require 'material-theme)
@@ -36,6 +38,9 @@
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
 
+
+;; Magit
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Ido and related packages
 (ido-mode 1) 
