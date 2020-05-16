@@ -37,7 +37,7 @@
 (setq inhibit-startup-message t) ;; hide the startup message
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
-
+(menu-bar-mode 1) ;; Activate the menu-bar
 
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
