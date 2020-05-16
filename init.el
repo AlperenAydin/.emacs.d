@@ -48,6 +48,7 @@
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
+(global-set-key (kbd "C-x C-d") 'ido-dired)
 ;; Language Config 
 ;; --------------------------------------
 
