@@ -9,7 +9,7 @@
 ;; Minor Language configs
 
 (load-packages
- '('yaml-mode))
+ '(yaml-mode))
 
 ;; YAML
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
