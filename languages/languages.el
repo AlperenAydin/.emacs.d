@@ -5,7 +5,7 @@
 ;; Major Language Configs
 ;; --------------------------------------
 (require '_python)
-
+(require '_cxx)
 ;; Minor Language configs
 
 (load-packages
