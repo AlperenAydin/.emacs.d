@@ -10,8 +10,12 @@
 ;; --------------------------------------
 
 (require 'package)
-(add-to-list 'package-archives
-       '("melpa" . "http://melpa.org/packages/") t) 
+(setq package-archives
+      '(
+        ("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("marmalade" . "https://marmalade-repo.org/packages/")))
+ 
 (package-initialize)
 
 (defun load-packages (package-list)
@@ -28,6 +32,8 @@
    material-theme
    ido-completing-read+
    magit
+   which-key
+   use-package
    ))
 
 (require 'better-defaults)
@@ -41,6 +47,9 @@
 
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; which-key
+(which-key-mode)
 
 ;; Ido and related packages
 (ido-mode 1) 
