@@ -36,7 +36,7 @@
 
 
 ;; Activating the base virtualenv
-(pyvenv-activate (expand-file-name "/home/alperen/.venv/base")) // TODO: Use environment variable
+(pyvenv-activate (expand-file-name "/home/alperen/.venv/base")) ;; TODO: Use environment variable
 
 
 (provide '_python)
