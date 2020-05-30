@@ -9,7 +9,8 @@
 ;; Minor Language configs
 
 (load-packages
- '(yaml-mode))
+ '(yaml-mode
+   cmake-mode))
 
 ;; YAML
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
